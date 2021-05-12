@@ -5,6 +5,7 @@ esp.osdebug(None)
 import gc
 gc.collect()
 
+# Network setup
 ssid = 'CANALBOX-7652'
 password = '4082665619'
 
