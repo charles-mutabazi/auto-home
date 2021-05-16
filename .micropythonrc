@@ -9,10 +9,15 @@
   },
   "ignore": {
     "extensions": [
-      ".micropythonrc"
+      ".micropythonrc",
+      ".pylintrc",
+      ".DS_Store"
     ],
     "directories": [
-      ".vscode"
+      ".vscode",
+      ".git",
+      ".DS_Store",
+      "all-stubs"
     ]
   },
   "tools": {

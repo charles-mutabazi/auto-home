@@ -1,11 +1,10 @@
 # This is script that run when device boot up or wake from sleep.
+import gc
 import network
 import esp
 esp.osdebug(None)
-import gc
 gc.collect()
 
-# Network setup
 ssid = 'CANALBOX-7652'
 password = '4082665619'
 

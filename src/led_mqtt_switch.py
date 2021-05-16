@@ -1,8 +1,8 @@
-from umqtt.simple import MQTTClient
+import time
+import machine
 from machine import Pin
 import ubinascii
-import machine
-import time
+from umqtt.simple import MQTTClient
 
 
 # ESP8266 ESP-12 modules have blue, active-low LED on GPIO2, replace
@@ -24,17 +24,17 @@ def sub_cb(topic, msg):
         off()
 
 def connect_and_subscribe():
-  client = MQTTClient(CLIENT_ID, SERVER)
-  client.set_callback(sub_cb)
-  client.connect()
-  client.subscribe(TOPIC+"set")
-  print("Connected to %s, subscribed to %s topic" % (SERVER, TOPIC+"set"))
-  return client
+    client = MQTTClient(CLIENT_ID, SERVER)
+    client.set_callback(sub_cb)
+    client.connect()
+    client.subscribe(TOPIC+"set")
+    print("Connected to %s, subscribed to %s topic" % (SERVER, TOPIC+"set"))
+    return client
 
 def restart_and_reconnect():
-  print('Failed to connect to MQTT broker. Reconnecting...')
-  time.sleep(5)
-  machine.reset()
+    print('Failed to connect to MQTT broker. Reconnecting...')
+    time.sleep(5)
+    machine.reset()
 
 def main():
     try:

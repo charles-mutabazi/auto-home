@@ -1,2 +1,2 @@
-import led_mqtt_switch as led_switch
-led_switch.main()
+import src.servo_control as servo
+servo.main()

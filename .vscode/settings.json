@@ -1,0 +1,16 @@
+{
+    "python.languageServer": "Pylance",
+    "python.autoComplete.extraPaths": [
+        "./src/lib",
+        "all-stubs/cpython_core",
+        "all-stubs/micropython-esp8266-1_11",
+    ],
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.jediEnabled": false,
+    "python.analysis.extraPaths": [
+        "./src/lib",
+        "all-stubs/cpython_core",
+        "all-stubs/micropython-esp8266-1_11"
+    ],
+}
